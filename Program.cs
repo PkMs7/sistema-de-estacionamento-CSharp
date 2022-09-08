@@ -13,7 +13,6 @@ precoPorHora = Convert.ToDecimal(Console.ReadLine());
 
 Estacionamento estacionamento = new Estacionamento(precoInicial, precoPorHora);
 
-string opcao;
 bool exibirMenu = true;
 
 while (exibirMenu){
