@@ -11,7 +11,7 @@ precoInicial = Convert.ToDecimal(Console.ReadLine());
 Console.WriteLine($"\nAgora digite o preço por hora:");
 precoPorHora = Convert.ToDecimal(Console.ReadLine());
 
-Estacionamento estacionamento = new Estacionamento();
+Estacionamento estacionamento = new Estacionamento(precoInicial, precoPorHora);
 
 string opcao;
 bool exibirMenu = true;
@@ -28,22 +28,19 @@ while (exibirMenu){
     switch (Console.ReadLine()) {
 
         case "1":
-        //TO DO
-        Console.WriteLine("Cadastro de veículo acessado");
+        estacionamento.AdicionarVeiculo();
         break;
 
         case "2":
-        // TO DO
-        Console.WriteLine("Remoção de veículo acessado");
+        estacionamento.RemoverVeiculo();
         break;
 
         case "3":
-        //TO DO
-        Console.WriteLine("Lista de veiculos acessado");
+        estacionamento.ListarVeiculos();
         break;
 
         case "4":
-        Console.WriteLine("Sistema encerrado acessado");
+        exibirMenu = false;
         break;
 
         default:
