@@ -33,7 +33,7 @@ namespace sistema_de_estacionamento_CSharp.src.Models
 
                 decimal valor = CalcularValorEstacionamento(precoInicial, precoPorHora, horas);
 
-                Console.WriteLine($"O valor a ser pago pelo cliente é: R$ {valor}\n");
+                Console.WriteLine($"O valor a ser pago pelo cliente é: {valor:C}\n");
                 Console.WriteLine($"Pressione qualquer tecla para efetivar a remoção do veículo {placa}");
                 Console.ReadLine();
                 carros.Remove(placa);
